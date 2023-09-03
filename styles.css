@@ -1,0 +1,151 @@
+body {
+    background-image: url('resources/SW_Background.jpg');
+    font-family: "Star Jedi", sans-serif;
+    overflow: hidden;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background: transparent;
+    padding: 20px;
+    z-index: 3;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.sidebar-button {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    background-color: #000000;
+    border: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-family: "Star Jedi", sans-serif;
+    font-size: 14px;
+}
+
+.sidebar-button:hover {
+    background-color: #333;
+}
+  
+
+.text-title {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.text-content {
+    text-align: left;
+}
+    
+  
+@keyframes crawl {
+    0% {
+        opacity: 1;
+        transform: perspective(800px) rotateX(45deg) translateY(100%);
+    }
+    100% {
+        transform: perspective(800px) rotateX(45deg) translateY(-100%);
+    }
+}
+
+.container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: transparent;
+    font-family: "Star Jedi", sans-serif;
+    font-size: 20px;
+    color: yellow;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    text-align: justify;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.text-crawl {
+    opacity: 0;
+    animation: crawl 60s linear infinite;
+    animation-delay: 7s; 
+}
+
+.intro-container {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: black; 
+    animation: backgroundFadeOut 7s linear forwards;
+    z-index: 2;
+}
+
+@keyframes backgroundFadeOut {
+    0% {
+        opacity: 1;
+    }
+    85% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.intro-text {
+    opacity: 0;
+    font-family: "Star Jedi", sans-serif;
+    font-size: 35px;
+    color:rgb(58, 176, 231);
+    animation: appearAndVanish 6s linear forwards;
+}
+
+@keyframes appearAndVanish {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#intro-textbox,
+#title-textbox,
+#content-textbox {
+    width: 200px;
+    margin: 5px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#content-textbox input[type="text"] {
+    height: 100px; 
+    resize: none; 
+    overflow: auto;
+}
