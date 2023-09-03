@@ -1,5 +1,7 @@
+@import url('https://fonts.cdnfonts.com/css/star-wars');
+
 body {
-    background-image: url('resources/SW_Background.jpg');
+    background-image: url('resources/Background.jpg');
     font-family: "Star Jedi", sans-serif;
     overflow: hidden;
 }
@@ -12,7 +14,7 @@ body {
     height: 100%;
     background: transparent;
     padding: 20px;
-    z-index: 3;
+    z-index: 4;
     justify-content: center;
     align-items: center;
 
@@ -80,7 +82,7 @@ body {
 .text-crawl {
     opacity: 0;
     animation: crawl 60s linear infinite;
-    animation-delay: 7s; 
+    animation-delay: 11s; 
 }
 
 .intro-container {
@@ -94,7 +96,43 @@ body {
     text-align: center;
     background-color: black; 
     animation: backgroundFadeOut 7s linear forwards;
+    z-index: 3;
+}
+
+.shrink-container {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: transparent;
     z-index: 2;
+}
+
+@keyframes textShrink {
+    0% {
+        opacity: 1;
+        font-size: 800px;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        font-size: 20px;
+    }
+}
+
+.shrink-text {
+    opacity: 0;
+    color: yellow;
+    font-weight: bold;
+    font-family: 'Star Wars', sans-serif;
+    animation: textShrink 6s linear forwards;
+    animation-delay: 7s; 
 }
 
 @keyframes backgroundFadeOut {
@@ -133,13 +171,11 @@ body {
 #title-textbox,
 #content-textbox {
     width: 200px;
-    margin: 5px;
+    margin: 5px 5px;
 }
 
 input[type="text"] {
-    width: 100%;
     padding: 5px;
-    margin: 5px 0;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
