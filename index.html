@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Wars Opening Crawl</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <a href="https://github.com/lioraft/StarWarsCrawl" target="_blank" class="sidebar-button">Github</a>
+        <button class="sidebar-button" id="edit-button">Edit Text</button>
+    <div id="intro-textbox" style="display: none;">
+        <input type="text" id="intro-editor" placeholder="Enter New Intro....">
+    </div>
+    <div id="title-textbox" style="display: none;">
+        <input type="text" id="title-editor" placeholder="Enter New Title....">
+    </div>
+    <div id="content-textbox" style="display: none;">
+        <input type="text" id="content-editor" placeholder="Enter New Content....">
+    </div>
+    <br>
+    <button class="sidebar-button" id="apply-button" style="display: none;">Apply</button>
+    </div>
+    <div class="intro-container">
+        <p class="intro-text">A long time ago in a galaxy far,<br>far away....</p>
+    </div>
+    <div class="container">
+        <div class="text-crawl">
+            <div class="text-title" id="input-title">
+                <p>
+                    episode iv<br>
+                    a new hope
+                </p>
+            </div>
+            <div class="text-content" id="input-content">
+            <p>
+                It is a period of civil war.<br>
+                Rebel spaceships, striking<br>
+                from a hidden base, have won<br>
+                their first victory against<br>
+                the evil Galactic Empire.
+                <br><br>
+                During the battle, Rebel<br>
+                spies managed to steal secret<br>
+                plans to the Empire's<br>
+                ultimate weapon, the DEATH<br>
+                STAR, and space<br>
+                station with enough power to<br>
+                destroy an entire planet.
+                <br><br>
+                Pursued by the Empire's<br>
+                sinister agents, Princess<br>
+                Leia races home aboard her<br>
+                starship, custodian of the<br>
+                stolen plans that can save<br>
+                her people and restore<br>
+                freedom to the galaxy....
+            </p>
+        </div>
+    </div>
+    </div>
+
+    <audio autoplay>
+        <source src="resources/Star_Wars_Main_Theme_Song.mp3" type="audio/mpeg">
+    </audio>      
+    
+    <script src="script.js"></script>
+</body>
+</html>
