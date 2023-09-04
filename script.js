@@ -1,5 +1,18 @@
 // making sure the code runs after the dom is ready
 document.addEventListener('DOMContentLoaded', function() {
+
+    // helper function to divide text into paragraphs based on \n 
+    function splitToParagraphs(textToSplit, elem) {
+        // split content into lines
+        var lines = textToSplit.split('\n');
+        // create a new paragraph element for each line and append it to text container
+        lines.forEach(function(line) {
+            var paragraph = document.createElement('p');
+            paragraph.textContent = line;
+            elem.appendChild(paragraph);
+        });
+    }
+    
     // get elements from form
     var editButton = document.getElementById('edit-button'); // edit text button
     var intro = document.getElementById('intro-textbox');
@@ -18,13 +31,13 @@ document.addEventListener('DOMContentLoaded', function() {
         introValue = "A long time ago in a galaxy far,\nfar away...."
     }
     var introValueElement = document.getElementById('introValue');
-    introValueElement.textContent = introValue;
+    splitToParagraphs(introValue, introValueElement);
         
     if (titleValue == null) {
         titleValue = "episode iv\na new hope";
     }
     var titleValueElement = document.getElementById('titleValue');
-    titleValueElement.textContent = titleValue;
+    splitToParagraphs(titleValue, titleValueElement);
         
     if (contentValue == null) {
         contentValue = "It is a period of civil war.\n" +
@@ -32,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
         "from a hidden base, have won\n" +
         "their first victory against\n"+
         "the evil Galactic Empire."+
-        "\n\n"+
+        "\n" + "\n"+
         "During the battle, Rebel\n" +
         "spies managed to steal secret\n" +
         "plans to the Empire's\n" +
@@ -50,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
         "freedom to the galaxy....";
     }
     var contentValueElement = document.getElementById('contentValue');
-    contentValueElement.textContent = contentValue;
+    splitToParagraphs(contentValue, contentValueElement);
 
     // event listener for edit button click
     editButton.addEventListener('click', function() {
