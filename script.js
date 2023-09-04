@@ -30,13 +30,13 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // if null, change text
     if (introValue == null) {
-        introValue = "A long time ago in a galaxy far,\nfar away...."
+        introValue = "A long time ago in a galaxy far,\nfar away....";
     }
     var introValueElement = document.getElementById('introValue');
     splitToParagraphs(introValue, introValueElement);
     
     if (mainValue == null) {
-        mainValue = "star\nwars"
+        mainValue = "@";
     }
     var mainValueElement = document.getElementById('mainValue');
     splitToParagraphs(mainValue, mainValueElement);
