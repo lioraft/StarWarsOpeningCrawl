@@ -1,4 +1,9 @@
 @font-face {
+    font-family: 'SF Distant Galaxy AltOutline';
+    src: url('fonts/SfDistantGalaxyAltoutline-e2Bp.ttf') format('truetype');
+}
+
+@font-face {
     font-family: 'Star Jedi Hollow';
     src: url('fonts/StarJediHollow-A4lL.ttf') format('truetype');
 }
@@ -131,7 +136,7 @@ body {
 @keyframes textShrink {
     0% {
         opacity: 1;
-        font-size: 800px;
+        font-size: 700px;
     }
     95% {
         opacity: 1;
@@ -146,7 +151,7 @@ body {
 .shrink-text {
     opacity: 0;
     color:yellow;
-    font-family: 'Star Jedi Hollow', sans-serif;
+    font-family: 'SF Distant Galaxy AltOutline', 'Star Jedi Hollow';
     animation: textShrink 8s linear forwards;
     animation-delay: 7s; 
 }

@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
     splitToParagraphs(introValue, introValueElement);
     
     if (mainValue == null) {
-        mainValue = "@";
+        mainValue = '\u0038';
     }
     var mainValueElement = document.getElementById('mainValue');
     splitToParagraphs(mainValue, mainValueElement);
