@@ -53,19 +53,12 @@ body {
   
 @keyframes crawl {
     0% {
-        opacity: 1;
+        opacity:1;
         transform: perspective(800px) rotateX(55deg) translateY(100%);
-        top: 100vh;
-    }
-    70% {
-        opacity: 1;
-        transform: perspective(800px) rotateX(55deg) translateY(0);
-        top: 0;
     }
     100% {
-        opacity: 0;
-        transform: perspective(800px) rotateX(55deg) translateY(-100%);
-        top: -100vh;
+        opacity:1;
+        transform: perspective(800px) rotateX(55deg) translateY(-200%);
     }
 }
 
