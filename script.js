@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
     splitToParagraphs(mainValue, mainValueElement);
     
     if (titleValue == null) {
-        titleValue = "episode iv\na new hope";
+        titleValue = "Episode IV\nA NEW HOPE";
     }
     var titleValueElement = document.getElementById('titleValue');
     splitToParagraphs(titleValue, titleValueElement);

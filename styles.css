@@ -42,7 +42,6 @@ body {
 
 .text-title {
     text-align: center;
-    text-transform: uppercase;
     font-size: 55px;
 }
 
@@ -55,15 +54,18 @@ body {
 @keyframes crawl {
     0% {
         opacity: 1;
-        transform: perspective(800px) rotateX(50deg) translateY(100%);
+        transform: perspective(800px) rotateX(55deg) translateY(100%);
+        top: 100vh;
     }
-    90% {
-        opacity: 0.7;
-        transform: perspective(800px) rotateX(50deg) translateY(-80%);
+    70% {
+        opacity: 1;
+        transform: perspective(800px) rotateX(55deg) translateY(0);
+        top: 0;
     }
     100% {
         opacity: 0;
-        transform: perspective(800px) rotateX(50deg) translateY(-100%);
+        transform: perspective(800px) rotateX(55deg) translateY(-100%);
+        top: -100vh;
     }
 }
 
@@ -89,13 +91,16 @@ body {
 
 .text-crawl {
     opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
     animation: crawl 60s linear infinite;
-    animation-delay: 12s; 
+    animation-delay: 11s; 
 }
 
 .text-crawl p {
-    max-width: 730px;
-    margin: 0 10px;
+    margin: 0;
+    flex: 1;
 }
 
 .intro-container {
@@ -109,7 +114,7 @@ body {
     text-align: left;
     background-color: black; 
     line-height: 10px;
-    animation: backgroundFadeOut 6s linear forwards;
+    animation: backgroundFadeOut 8s linear forwards;
     z-index: 3;
 }
 
@@ -132,9 +137,9 @@ body {
         opacity: 1;
         font-size: 800px;
     }
-    90% {
+    95% {
         opacity: 1;
-        font-size: 80px;
+        font-size: 40px;
     }
     100% {
         opacity: 0;
@@ -150,14 +155,14 @@ body {
     font-weight: bold;
     font-family: 'Star Wars', sans-serif;
     animation: textShrink 8s linear forwards;
-    animation-delay: 6s; 
+    animation-delay: 7s; 
 }
 
 @keyframes backgroundFadeOut {
     0% {
         opacity: 1;
     }
-    90% {
+    85% {
         opacity: 1;
     }
     100% {
@@ -190,19 +195,18 @@ body {
 #content-textbox,
 #maintitle-textbox {
     font-family: "Star Jedi", sans-serif;
-    margin: 5px 5px 5px 5px;
+    margin: 5px; 
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
 }
 
 #content-textbox {
-    font-family: "Star Jedi", sans-serif;
-    padding: 5px;
-    border: 1px solid #ccc;
     resize: none; 
     overflow: auto;
 }
 
 input[type="text"], textarea {
-    width: 200px;
-    padding: 5px;
-    border: 1px solid #ccc;
+    font-family: "Star Jedi", sans-serif;
+    width: 170px;
 }
