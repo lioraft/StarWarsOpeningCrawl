@@ -11,13 +11,16 @@
         <a href="https://github.com/lioraft/StarWarsCrawl" target="_blank" class="sidebar-button">Github</a>
         <button class="sidebar-button" id="edit-button">Edit Text</button>
     <div id="intro-textbox" style="display: none;">
-        <input type="text" id="intro-editor" placeholder="Enter New Intro....">
+        <input type="text" id="intro-editor" placeholder="Enter Intro....">
+    </div>
+    <div id="maintitle-textbox" style="display: none;">
+        <input type="text" id="maintitle-editor" placeholder="Enter Main Title....">
     </div>
     <div id="title-textbox" style="display: none;">
-        <input type="text" id="title-editor" placeholder="Enter New Title....">
+        <input type="text" id="title-editor" placeholder="Enter Crawl Title....">
     </div>
     <div id="content-textbox" style="display: none;">
-        <textarea id="content-editor" placeholder="Enter New Content...."></textarea>
+        <textarea id="content-editor" placeholder="Enter Crawl Content...."></textarea>
     </div>
     <br>
     <button class="sidebar-button" id="apply-button" style="display: none;">Apply</button>
@@ -26,7 +29,9 @@
         <p class="intro-text"><span id="introValue"></span></p>
     </div>
     <div class="shrink-container">
-        <p class="shrink-text">STAR<br>WARS</p>
+        <p class="shrink-text">
+            <span id="mainValue"></span>
+        </p>
     </div>
     <div class="container">
         <div class="text-crawl">
@@ -42,9 +47,9 @@
     </div>
     </div>
 
-    <audio autoplay>
+    <audio id="themeAudio" controls style="display: none;">
         <source src="http://soundfxcenter.com/movies/star-wars/8d82b5_Star_Wars_Main_Theme_Song.mp3" type="audio/mpeg">
-    </audio>      
+    </audio>     
     
     <script src="script.js"></script>
 </body>

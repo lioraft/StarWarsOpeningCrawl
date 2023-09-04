@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // get elements from form
     var editButton = document.getElementById('edit-button'); // edit text button
     var intro = document.getElementById('intro-textbox');
+    var mainTitle = document.getElementById('maintitle-textbox');
     var title = document.getElementById('title-textbox');
     var applyButton = document.getElementById('apply-button');
     var content = document.getElementById('content-textbox');
@@ -25,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var introValue = localStorage.getItem('introValue');
     var titleValue = localStorage.getItem('titleValue');
     var contentValue = localStorage.getItem('contentValue');
+    var mainValue = localStorage.getItem('mainValue');
     
     // if null, change text
     if (introValue == null) {
@@ -32,7 +34,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     var introValueElement = document.getElementById('introValue');
     splitToParagraphs(introValue, introValueElement);
-        
+    
+    if (mainValue == null) {
+        mainValue = "star\nwars"
+    }
+    var mainValueElement = document.getElementById('mainValue');
+    splitToParagraphs(mainValue, mainValueElement);
+    
     if (titleValue == null) {
         titleValue = "episode iv\na new hope";
     }
@@ -73,11 +81,13 @@ document.addEventListener('DOMContentLoaded', function() {
             title.style.display = 'block';
             content.style.display = 'block';
             applyButton.style.display = 'block';
+            mainTitle.style.display = 'block';
         } else {
             intro.style.display = 'none';
             title.style.display = 'none';
             content.style.display = 'none';
             applyButton.style.display = 'none';
+            mainTitle.style.display = 'none';
         }
         // change isvisible state
         isVisible = !isVisible;
@@ -89,10 +99,12 @@ document.addEventListener('DOMContentLoaded', function() {
         var introInput = document.getElementById('intro-editor');
         var titleInput = document.getElementById('title-editor');
         var contentInput = document.getElementById('content-editor');
+        var mainInput = document.getElementById('maintitle-editor');
         // get items from local storage and save values in them
         localStorage.setItem('introValue', introInput.value);
         localStorage.setItem('titleValue', titleInput.value);
         localStorage.setItem('contentValue', contentInput.value);
+        localStorage.setItem('mainValue', mainInput.value);
         // alert user of success
         alert('Changed successfully! Please wait for page to refresh.');
         // refresh page
