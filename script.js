@@ -1,6 +1,23 @@
 // making sure the code runs after the dom is ready
 document.addEventListener('DOMContentLoaded', function() {
 
+    // function to delay the start the audio
+    function delayAudio() {
+        // get audio element
+        var audio = document.getElementById("themeAudio");
+
+        // set a delay
+        var delay = 7000;
+
+        // start playback after the specified delay
+        setTimeout(function() {
+            audio.play(); // Start playback
+        }, delay);
+    }
+
+    // call the delayAudioPlayback function
+    delayAudio();
+
     // helper function to divide text into paragraphs based on \n 
     function splitToParagraphs(textToSplit, elem) {
         // split content into lines
@@ -30,13 +47,13 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // if null, change text
     if (introValue == null) {
-        introValue = "A long time ago in a galaxy far,\nfar away....";
+        introValue = "A long time ago in a galaxy far,\nfar away...."
     }
     var introValueElement = document.getElementById('introValue');
     splitToParagraphs(introValue, introValueElement);
     
     if (mainValue == null) {
-        mainValue = '\u0038';
+        mainValue = "sTaR\nwArS";
     }
     var mainValueElement = document.getElementById('mainValue');
     splitToParagraphs(mainValue, mainValueElement);

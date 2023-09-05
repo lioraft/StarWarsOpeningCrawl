@@ -151,7 +151,7 @@ body {
 .shrink-text {
     opacity: 0;
     color:yellow;
-    font-family: 'SF Distant Galaxy AltOutline', 'Star Jedi Hollow';
+    font-family: 'Star Jedi Hollow', 'SF Distant Galaxy AltOutline';
     animation: textShrink 8s linear forwards;
     animation-delay: 7s; 
 }
